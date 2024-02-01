@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Services;
+use App\Http\Controllers\ServiesController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/Services',[ServiesController::class, 'index'])->name('services.index');
+Route::get('/Services/create',[ServiesController::class, 'create'])->name('services.create');
+Route::post('/Services',[ServiesController::class, 'save'])->name('services.save');
+
+
+
