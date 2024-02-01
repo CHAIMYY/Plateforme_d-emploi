@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 class ServiesController extends Controller
 {
     public function index(){
-        // $services = Service::all();
-
-        return view('services.index');
+        $services = Service::all();
+        return view('services.index',['services' => $services]);
+       
     }
     public function create(){
         $categories = Categorie::all();

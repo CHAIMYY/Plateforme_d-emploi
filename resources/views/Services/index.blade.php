@@ -66,6 +66,21 @@
 </section> --}}
 
 
+<section class="grid grid-cols-2 gap-4 m-8">
+    @foreach ($services as $ser)
+    <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+        <div class="flex flex-col justify-between p-4 leading-normal">
+            <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $ser->title }}</h2>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $ser->desc }}</p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $ser->contact }}</p>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $ser->cost }}</h5>
+            
+
+
+
+        </div>
+    </a>
+    @endforeach
 </section>
 
 
