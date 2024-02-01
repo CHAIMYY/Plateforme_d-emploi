@@ -12,7 +12,6 @@ class CategoriesController extends Controller
         $categories = Categorie::all();
         return view('services.index', ['name' => $categories]);
     }
-
-
+   
 }
 

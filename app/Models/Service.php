@@ -17,6 +17,10 @@ class Service extends Model
         'cost'
     ];
 
-    
+    public function category()
+{
+    return $this->belongsTo(Categorie::class,'category_id');
+}
+
     
 }
