@@ -88,7 +88,6 @@ use App\Models\Categorie;
   </div>
 </form>
 
- 
-    
+   
 </body>
 </html>

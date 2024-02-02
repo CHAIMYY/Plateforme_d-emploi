@@ -51,7 +51,7 @@
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 ">{{ $ser->contact }}</p>
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $ser->cost }}</h5>
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">{{ $ser->category->name }}</h5>
-          
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 ">{{ $ser->created_at}}</p>
         </div>
     </a>
     @endforeach
