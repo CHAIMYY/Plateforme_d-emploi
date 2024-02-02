@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ServiesController extends Controller
 {
     public function index(){
-        $services = Service::all();
+        $services = Service::orderBy('created_at', 'desc')->get();
         return view('services.index',['services' => $services]);
        
     }
@@ -37,4 +37,6 @@ class ServiesController extends Controller
             dd($e->getMessage());
         }
     }
+  
+
 }

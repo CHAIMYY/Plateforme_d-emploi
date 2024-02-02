@@ -13,7 +13,7 @@
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">HireMe</span>
+        <span class="max-w-lg text-3xl font-semibold leading-relaxed text-gray-900 dark:text-white">HireMe</span>
     </a>
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
@@ -35,27 +35,27 @@
   </div>
 </nav>
  <!-- END of NAVBAR -->
+<div class="max-w-full h-40 ">
+    <h1 class="mt-3 text-5xl font-semibold leading-relaxed text-gray-900 dark:text-blue-500 text-center">SERVICES</h1>
+    <p class="mt-3 text-1xl font-semibold leading-relaxed text-gray-900 dark:text-gray-500 text-center">Here you will find all the services that you need !</p>
+</div>
 
-    
-   
-
-
-<section class="grid grid-cols-2 gap-4 m-8">
+{{-- <section class="grid grid-cols-2 gap-4 m-8 justify-center"> --}}
+  <section class="flex flex-wrap justify-center items-center gap-4 md:flex-row">
+    <div class="md:grid md:grid-cols-4 gap-6 flex flex-col">
     @foreach ($services as $ser)
     <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-        <div class="flex flex-col justify-between p-4 leading-normal">
+        <div class="flex flex-col justify-between p-4 leading-normal ">
             <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $ser->title }}</h2>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $ser->desc }}</p>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $ser->contact }}</p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 ">{{ $ser->contact }}</p>
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $ser->cost }}</h5>
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $ser->category->name }}</h5>
-           
-
-
-
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">{{ $ser->category->name }}</h5>
+          
         </div>
     </a>
     @endforeach
+  </div>
 </section>
 
 

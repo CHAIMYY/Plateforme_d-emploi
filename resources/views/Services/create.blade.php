@@ -41,6 +41,12 @@ use App\Models\Categorie;
   </div>
 </nav>
  <!-- END of NAVBAR -->
+
+ <div class="max-w-full h-25 ">
+    <h1 class="mt-3 text-5xl font-semibold leading-relaxed text-gray-900 dark:text-blue-500 text-center">HireMe</h1>
+    <p class="mt-3 text-2xl font-semibold leading-relaxed text-gray-900 dark:text-gray-500 text-center">Create your service </p>
+</div>
+
      <!-- create form -->
      
 <form method="post" class="max-w-sm mx-auto mt-10" action="{{route('services.save')}}">
