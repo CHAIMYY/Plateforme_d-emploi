@@ -25,7 +25,7 @@ class ServiesController extends Controller
                 'category_id' => ['required', 'numeric'],
                 'title' => ['required','min:3'],
                 'desc' => ['required','min:3'],
-                'contact' => ['required', 'numeric'],
+                'contact' => ['required', 'regex:/^\+212\s?\d{9}$/'],
                 'cost' => ['required', 'numeric'] 
             ]);
 

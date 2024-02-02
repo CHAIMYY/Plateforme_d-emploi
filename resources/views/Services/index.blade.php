@@ -42,16 +42,17 @@
 
 {{-- <section class="grid grid-cols-2 gap-4 m-8 justify-center"> --}}
   <section class="flex flex-wrap justify-center items-center gap-4 md:flex-row">
-    <div class="md:grid md:grid-cols-4 gap-6 flex flex-col">
+    <div class="md:grid md:grid-cols-2 gap-6 flex flex-col">
     @foreach ($services as $ser)
-    <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-700 dark:hover:bg-gray-700">
         <div class="flex flex-col justify-between p-4 leading-normal ">
-            <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $ser->title }}</h2>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $ser->desc }}</p>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 ">{{ $ser->contact }}</p>
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $ser->cost }}</h5>
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">{{ $ser->category->name }}</h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 ">{{ $ser->created_at}}</p>
+           <p class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white ">{{ $ser->category->name }}</p>
+            <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-blue-400 ">{{ $ser->title }}</h2>
+            <p class="mb-3 font-normal text-gray-700 dark:text-white">{{ $ser->desc }}</p>
+          
+            <h5 class="mb-2 text-1xl font-bold tracking-tight text-gray-900 dark:text-green-300">{{ $ser->cost }} MAD</h5>
+           <p class="mb-3 font-bold text-gray-700 dark:text-gray-400 ">Contact:{{ $ser->contact }}</p>
+            <p class="mb-3 font-normal text-gray-700 dark:text-red-300">{{ $ser->created_at}}</p>
         </div>
     </a>
     @endforeach
@@ -61,3 +62,4 @@
 
 </body>
 </html>
+
